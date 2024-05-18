@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_background_container.dart';
+import 'package:responsive_dash_board/widgets/quick_invoice_form.dart';
 
 import 'latest_transaction.dart';
 import 'quick_invoice_header.dart';
@@ -18,6 +19,10 @@ class QuickInvoice extends StatelessWidget {
             height: 24,
           ),
           LatestTransaction(),
+          Divider(
+            height: 48,
+          ),
+          QuickInvoiceForm(),
         ],
       ),
     );
