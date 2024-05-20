@@ -1,0 +1,14 @@
+{
+    "pieces.autoExpansion": true,
+    "pieces.code-lens": true,
+    "pieces.sidePanelViews.exploredMaterials": true,
+    "pieces.sidePanelViews.relatedMaterials": true,
+    "pieces.sidePanelViews.savedMaterials": true,
+    "pieces.sidePanelViews.suggestedMaterials": true,
+    "pieces.toShowUpdateExtensionNotification": true,
+    "pieces.telemetry": true,
+    "pieces.exploredSnippetInsights.documentWithPiecesInsights": true,
+    "pieces.do-not-show-download-cta": false,
+    "pieces.automaticallyCopyLink": true,
+    "pieces.autoSave": true
+}
