@@ -28,7 +28,7 @@ class IncomeItemDetails extends StatelessWidget {
         ),
       ),
       trailing: Text(
-        itemDetailsModel.value,
+        '${itemDetailsModel.value}%',
         style: AppStayles.styleMedium16.copyWith(
           color: const Color(0xff208CC8),
         ),

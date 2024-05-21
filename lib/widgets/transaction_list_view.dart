@@ -28,6 +28,19 @@ class TransactionListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: items
+          .map(
+            (e) => Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: TransactionItem(transactionModel: e),
+            ),
+          )
+          .toList(),
+    );
+
+    // Error with CustomScrollView because shrinkWrap=true
+    // ignore: dead_code
     return ListView.builder(
       itemCount: items.length,
       shrinkWrap: true,
