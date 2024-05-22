@@ -17,7 +17,7 @@ class IncomeItemDetails extends StatelessWidget {
       visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
       title: Text(
         itemDetailsModel.title,
-        style: AppStayles.styleRegular16,
+        style: AppStayles.styleRegular16(context),
       ),
       leading: Container(
         height: 12,
@@ -29,7 +29,7 @@ class IncomeItemDetails extends StatelessWidget {
       ),
       trailing: Text(
         '${itemDetailsModel.value}%',
-        style: AppStayles.styleMedium16.copyWith(
+        style: AppStayles.styleMedium16(context).copyWith(
           color: const Color(0xff208CC8),
         ),
       ),

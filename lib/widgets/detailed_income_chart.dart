@@ -47,7 +47,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
 
           return PieChartSectionData(
             title: isActive ? value.title : '${value.value}%',
-            titleStyle: AppStayles.styleSemiBold16.copyWith(
+            titleStyle: AppStayles.styleSemiBold16(context).copyWith(
               color: isActive ? null : Colors.white,
             ),
             titlePositionPercentageOffset: isActive ? 1.5 : null,

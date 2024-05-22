@@ -26,18 +26,18 @@ class TransactionItem extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 6.0),
           child: Text(
             transactionModel.title,
-            style: AppStayles.styleSemiBold16,
+            style: AppStayles.styleSemiBold16(context),
           ),
         ),
         subtitle: Text(
           transactionModel.date,
-          style: AppStayles.styleRegular16.copyWith(
+          style: AppStayles.styleRegular16(context).copyWith(
             color: const Color(0xffAAAAAA),
           ),
         ),
         trailing: Text(
           transactionModel.amount,
-          style: AppStayles.styleSemiBold20.copyWith(
+          style: AppStayles.styleSemiBold20(context).copyWith(
             color: transactionModel.isWithdrawal
                 ? const Color(0xffF3735E)
                 : const Color(0xff7DD97B),
