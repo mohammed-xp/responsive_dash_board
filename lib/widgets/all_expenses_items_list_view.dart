@@ -48,6 +48,34 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
     // );
 
     return Row(
+      children: List.generate(items.length * 2 - 1, (index) {
+        if (index % 2 == 0) {
+          // عنصر Expanded
+          int itemIndex = index ~/ 2;
+          var item = items[itemIndex];
+
+          return Expanded(
+            child: InkWell(
+              onTap: () {
+                setState(() {
+                  selectedIndex = itemIndex;
+                });
+              },
+              child: AllExpensesItem(
+                itemModel: item,
+                isSelected: selectedIndex == itemIndex,
+              ),
+            ),
+          );
+        } else {
+          // عنصر SizedBox بين العناصر
+          return const SizedBox(width: 8.0); // يمكنك تغيير العرض حسب الحاجة
+        }
+      }),
+    );
+
+    // ignore: dead_code
+    return Row(
       children: items.asMap().entries.map((e) {
         int index = e.key;
         var item = e.value;
