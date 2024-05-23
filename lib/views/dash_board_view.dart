@@ -23,11 +23,11 @@ class _DashBoardViewState extends State<DashBoardView> {
       appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
               elevation: 0,
-              backgroundColor: const Color(0xffFAFAFA),
+              backgroundColor: const Color(0xff4EB7F2),
               leading: IconButton(
                 icon: const Icon(
                   Icons.menu_rounded,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
                 onPressed: () {
                   scaffoldKey.currentState!.openDrawer();
@@ -37,10 +37,12 @@ class _DashBoardViewState extends State<DashBoardView> {
           : null,
       drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? SizedBox(
-              width: MediaQuery.sizeOf(context).width * .6,
+              width: MediaQuery.sizeOf(context).width * .7,
               child: const CustomDrawer())
           : null,
-      backgroundColor: const Color(0xffF7F9FA),
+      backgroundColor: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+          ? Colors.white
+          : const Color(0xffF7F9FA),
       body: AdaptiveLayoutBuilder(
         mobileLayout: (context) => const DashboardMobileLayout(),
         tabletLayout: (context) => const DashboardTabletLayout(),

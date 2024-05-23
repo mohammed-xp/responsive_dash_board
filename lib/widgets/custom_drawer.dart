@@ -23,6 +23,11 @@ class CustomDrawer extends StatelessWidget {
       child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
+            child: SizedBox(
+              height: 40,
+            ),
+          ),
+          SliverToBoxAdapter(
             child: UserInfoListTile(
               userInfoModel: userInfoModel,
             ),

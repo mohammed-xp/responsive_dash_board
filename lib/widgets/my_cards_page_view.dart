@@ -15,9 +15,13 @@ class MyCardsPageView extends StatelessWidget {
     return ExpandablePageView(
       controller: pageController,
       scrollDirection: Axis.horizontal,
+      physics: const BouncingScrollPhysics(),
       children: List.generate(
         3,
-        (index) => const MyCard(),
+        (index) => const Padding(
+          padding: EdgeInsets.only(right: 8.0),
+          child: MyCard(),
+        ),
       ),
     );
   }
